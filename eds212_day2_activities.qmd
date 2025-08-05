@@ -4,7 +4,52 @@ format: html
 editor: visual
 ---
 
-```{r} #redo every time this script is run}
-#install.packages("tidyverse")
-#install.packages("palmerpenguins")
+```{r}
+#install.packages("ggplot2")
+library(ggplot2)
+library(palmerpenguins)
+```
+
+```{r}
+#usethis::use_git()
+#usethis::use_github()
+```
+
+```{r}
+eq1 <- expression(x^2)
+
+x <- 3
+
+express <- D(expr = eq1, name = "x")
+
+eval(express)
+```
+
+```{r}
+eq <- expression(2*(3*a+2)^4-5)
+
+a <- 1.2
+
+answer <- D(expr= eq, name="a")
+eval(answer)
+```
+
+```{r}
+
+ggplot(data = penguins, aes(x=bill_length_mm, y= bill_depth_mm))+
+  geom_point(aes(color=species))+
+  scale_color_manual(values = c("red","pink","blue"))+
+  labs( x= "bill length mm",
+        y = "bill depths mm",
+        title= 'Bill Lengths and Depth in mm')
+
+```
+
+```{r}
+ggplot(data = penguins, aes(x=species, y= flipper_length_mm))+
+  geom_jitter(aes(color=species))+
+  scale_color_manual(values = c("red","pink","blue"))+
+  labs( x= "species",
+        y = "flipper lengths mm",
+        title= "Species and flipper length in mm")
 ```
