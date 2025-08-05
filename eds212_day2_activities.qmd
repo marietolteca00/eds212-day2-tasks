@@ -1,0 +1,10 @@
+---
+title: "eds212-day2-tasks"
+format: html
+editor: visual
+---
+
+```{r} #redo every time this script is run}
+#install.packages("tidyverse")
+#install.packages("palmerpenguins")
+```
