@@ -11,8 +11,8 @@ library(palmerpenguins)
 ```
 
 ```{r}
-#usethis::use_git()
-#usethis::use_github()
+usethis::use_git()
+usethis::use_github()
 ```
 
 ```{r}
